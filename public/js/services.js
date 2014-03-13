@@ -1,4 +1,4 @@
 angular.module('airlineServices', ['ngResource'])
 	.factory('Airport', function ($resource) {
-		return $resource('/airports.json');
+		return $resource('/api/airports/:code');
 	});

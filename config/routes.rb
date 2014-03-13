@@ -1,5 +1,13 @@
 AngularTest::Application.routes.draw do
-  resources :airports
+  
+  
+  scope :api, defaults: {format: :json} do
+    resources :airports
+  end
+
+
+  
+  #resources :airports
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
