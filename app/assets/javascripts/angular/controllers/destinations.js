@@ -8,7 +8,9 @@ function DestinationsCtrl($scope, Airport) {
 
 
   $scope.setAirport = function(code) {
-    $scope.currentAirport = $scope.airports[code];
+    $scope.currentAirport = Airport.get({
+			airportCode: code
+		});
   };
 
 

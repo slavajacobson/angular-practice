@@ -11,10 +11,10 @@ function airlineRouter($routeProvider) {
 								.when('/airports/:airport1/:airport2', {
 									templateUrl: 'partials/two_airports.html'})
 								.when('/flights', {
-									template:'<h3>Flights</h3>',
+									templateUrl:'partials/flights.html',
 								 	controller: 'FlightsCtrl'})
 								.when('/reservations', {
-									template:'<h3>Your reservations</h3>',
+									templateUrl:'partials/reservations',
 								 	controller: 'ReservationsCtrl'});
 
 }

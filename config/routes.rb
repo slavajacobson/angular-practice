@@ -1,8 +1,15 @@
 AngularTest::Application.routes.draw do
   
   
+  
+
+  get "main/airport"
+  resources :flights, only: [:new]
+
   scope :api, defaults: {format: :json} do
     resources :airports
+    resources :flights
+    resources :reservations
   end
 
 
@@ -13,7 +20,7 @@ AngularTest::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'main#airport'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

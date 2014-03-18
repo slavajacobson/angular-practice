@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140313002559) do
+ActiveRecord::Schema.define(version: 20140316205205) do
 
   create_table "airports", force: true do |t|
     t.string   "code"
@@ -33,5 +33,22 @@ ActiveRecord::Schema.define(version: 20140313002559) do
   end
 
   add_index "destinations", ["airport_id"], name: "index_destinations_on_airport_id"
+
+  create_table "flights", force: true do |t|
+    t.integer  "number"
+    t.string   "origin"
+    t.string   "destination"
+    t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reservations", force: true do |t|
+    t.integer  "number"
+    t.string   "origin"
+    t.string   "destination"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
